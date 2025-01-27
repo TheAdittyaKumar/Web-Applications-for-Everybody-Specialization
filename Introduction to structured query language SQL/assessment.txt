@@ -1,0 +1,14 @@
+CREATE DATABASE Ages DEFAULT CHARACTER SET utf8;
+CREATE TABLE Ages (
+    `name` VARCHAR(128),
+    age INTEGER
+);
+DELETE FROM Ages;
+
+INSERT INTO Ages (`name`, age) VALUES ('Evie', 27);
+INSERT INTO Ages (`name`, age) VALUES ('Mahek', 25);
+INSERT INTO Ages (`name`, age) VALUES ('Ryan', 24);
+INSERT INTO Ages (`name`, age) VALUES ('Raashi', 24);
+INSERT INTO Ages (`name`, age) VALUES ('Hopkin', 29);
+INSERT INTO Ages (`name`, age) VALUES ('Aiadan', 29);
+SELECT sha1(CONCAT(`name`, age)) AS X FROM Ages ORDER BY X;
